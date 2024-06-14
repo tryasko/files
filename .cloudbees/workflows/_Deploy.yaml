@@ -1,6 +1,6 @@
 apiVersion: automation.cloudbees.io/v1alpha1
 kind: workflow
-name: Test
+name: _Deploy
 
 on:
   push:
@@ -10,8 +10,8 @@ on:
 jobs:
   build:
     steps:
-      - name: Run test
+      - name: Run _Deploy
         uses: docker://golang:1.20.3-alpine3.17
         shell: sh
         run: |
-          echo "Tests successfully passed"
+          echo "Deployed"
