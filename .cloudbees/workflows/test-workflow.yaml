@@ -1,6 +1,6 @@
 apiVersion: automation.cloudbees.io/v1alpha1
 kind: workflow
-name: test workflow
+name: build
 on:
   push:
     branches:
@@ -8,8 +8,8 @@ on:
 jobs:
   build:
     steps:
-      - name: Say hello
+      - name: Run build
         uses: docker://golang:1.20.3-alpine3.17
         shell: sh
         run: |
-          echo "hello test workflow"
+          echo "Build is done"
