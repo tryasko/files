@@ -1,10 +1,10 @@
 apiVersion: automation.cloudbees.io/v1alpha1
 kind: workflow
 name: Sleep-70
+
 on:
-  push:
-    branches:
-      - "**"
+  workflow_dispatch:
+
 jobs:
   build:
     steps:
