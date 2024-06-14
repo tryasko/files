@@ -1,0 +1,16 @@
+apiVersion: automation.cloudbees.io/v1alpha1
+kind: workflow
+name: Sleep-100
+on:
+  push:
+    branches:
+      - "**"
+jobs:
+  build:
+    steps:
+      - name: Run Sleep-100
+        uses: docker://golang:1.20.3-alpine3.17
+        shell: sh
+        run: |
+          sleep 100
+          echo "Sleep-100 is done"
