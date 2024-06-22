@@ -1,0 +1,10 @@
+name: Generate Podcast Feeds
+on: [push]
+
+jobs:
+  build:
+    runs-on: ""
+    steps:
+      - name: Checkout the current repository
+        uses: actions/checkout@v4
+      - name: Step 2
